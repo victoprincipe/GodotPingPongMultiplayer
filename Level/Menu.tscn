@@ -7,20 +7,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Panel" type="Panel" parent="."]
-margin_right = 1026.0
-margin_bottom = 601.0
+margin_right = 800.0
+margin_bottom = 800.0
 
 [node name="TitleContainer" type="CenterContainer" parent="Panel"]
 editor/display_folded = true
 margin_left = 4.0
 margin_top = 4.0
-margin_right = 1024.0
+margin_right = 800.0
 margin_bottom = 221.0
 
 [node name="Title" type="Label" parent="Panel/TitleContainer"]
-margin_left = 138.0
+margin_left = 26.0
 margin_top = 76.0
-margin_right = 882.0
+margin_right = 770.0
 margin_bottom = 140.0
 custom_fonts/font = ExtResource( 1 )
 text = "GODOT PONG MULTIPLAYER"
@@ -28,18 +28,18 @@ align = 1
 valign = 1
 
 [node name="HostButton" type="Button" parent="Panel"]
-margin_left = 410.057
-margin_top = 324.103
-margin_right = 562.057
-margin_bottom = 394.103
+margin_left = 330.0
+margin_top = 320.0
+margin_right = 482.0
+margin_bottom = 390.0
 custom_fonts/font = ExtResource( 1 )
 text = "HOST"
 
 [node name="JoinButton" type="Button" parent="Panel"]
-margin_left = 410.057
-margin_top = 400.0
-margin_right = 562.057
-margin_bottom = 470.0
+margin_left = 330.0
+margin_top = 420.0
+margin_right = 482.0
+margin_bottom = 490.0
 custom_fonts/font = ExtResource( 1 )
 text = "JOIN"
 __meta__ = {
