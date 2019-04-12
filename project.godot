@@ -19,6 +19,10 @@ config/name="GodotPongMultiplayer"
 run/main_scene="res://Level/Menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+NetworkManager="*res://Scripts/NetworkManager.gd"
+
 [display]
 
 window/size/width=800
