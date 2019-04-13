@@ -10,17 +10,16 @@ onready var ball = get_node("Ball")
 
 
 func _ready():
-	if get_tree().is_network_server():
-		rpc("set_players_paddle")
+	rpc("set_players_paddle")
 	pass
 
 sync func set_players_paddle():
 	if get_tree().is_network_server():
 		ball.set_network_master(get_tree().get_network_unique_id())
-		p1.set_network_master(NetworkManager.players[0])
-		p2.set_network_master(NetworkManager.players[1])
-		p3.set_network_master(NetworkManager.players[2])
-		p4.set_network_master(NetworkManager.players[3])
+	p1.set_network_master(NetworkManager.players[0])
+	p2.set_network_master(NetworkManager.players[1])
+	p3.set_network_master(NetworkManager.players[2])
+	p4.set_network_master(NetworkManager.players[3])
 	pass
 
 remote func register_player(id):

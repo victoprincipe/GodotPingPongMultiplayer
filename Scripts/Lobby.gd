@@ -29,3 +29,11 @@ func update_player_status():
 		if get_tree().is_network_server():
 			start_button.show()
 	pass
+
+sync func start_game():
+	get_tree().change_scene("res://Level/Game.tscn")
+	pass
+
+func _on_Button_button_down():
+	rpc("start_game")
+	pass

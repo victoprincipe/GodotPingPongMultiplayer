@@ -112,3 +112,4 @@ margin_bottom = 740.0
 custom_fonts/font = ExtResource( 2 )
 text = "START"
 
+[connection signal="button_down" from="Panel/Button" to="." method="_on_Button_button_down"]
