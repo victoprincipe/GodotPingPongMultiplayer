@@ -13,7 +13,6 @@ margin_right = 800.0
 margin_bottom = 800.0
 
 [node name="TitleContainer" type="CenterContainer" parent="Panel"]
-editor/display_folded = true
 margin_left = 4.0
 margin_top = 4.0
 margin_right = 800.0
