@@ -29,3 +29,23 @@ remote func register_player(id):
 func on_connect():
 	rpc_id(0, "register_player", get_tree().get_network_unique_id())
 	pass
+
+func _on_BoxUp_body_entered(body):
+	if get_tree().is_network_server():
+		ball.reset_ball()
+	pass
+
+func _on_BoxDown_body_entered(body):
+	if get_tree().is_network_server():
+		ball.reset_ball()
+	pass
+
+func _on_BoxLeft_body_entered(body):
+	if get_tree().is_network_server():
+		ball.reset_ball()
+	pass
+
+func _on_BoxRight_body_entered(body):
+	if get_tree().is_network_server():
+		ball.reset_ball()
+	pass

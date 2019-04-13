@@ -16,7 +16,7 @@ bounce = 1.0
 extents = Vector2( 15.83, 18.1 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 457.575, 26.7191 )
+extents = Vector2( 475.076, 26.7191 )
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
@@ -111,24 +111,37 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
 shape = SubResource( 3 )
 
-[node name="GameBounds" type="StaticBody2D" parent="."]
+[node name="BoxUp" type="Area2D" parent="."]
 editor/display_folded = true
 
-[node name="BoxUp" type="CollisionShape2D" parent="GameBounds"]
-position = Vector2( 406, -30 )
+[node name="BoxUp" type="CollisionShape2D" parent="BoxUp"]
+position = Vector2( 406, -84.5007 )
 shape = SubResource( 4 )
 
-[node name="BoxDown" type="CollisionShape2D" parent="GameBounds"]
-position = Vector2( 413.861, 828.772 )
+[node name="BoxDown" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="BoxDown" type="CollisionShape2D" parent="BoxDown"]
+position = Vector2( 410.345, 874.911 )
 shape = SubResource( 4 )
 
-[node name="BoxLeft" type="CollisionShape2D" parent="GameBounds"]
-position = Vector2( -30, 400 )
+[node name="BoxLeft" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="BoxLeft" type="CollisionShape2D" parent="BoxLeft"]
+position = Vector2( -89.775, 400 )
 rotation = 1.5708
 shape = SubResource( 4 )
 
-[node name="BoxRight" type="CollisionShape2D" parent="GameBounds"]
-position = Vector2( 830, 410 )
+[node name="BoxRight" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="BoxRight" type="CollisionShape2D" parent="BoxRight"]
+position = Vector2( 900.324, 410 )
 rotation = 1.5708
 shape = SubResource( 4 )
 
+[connection signal="body_entered" from="BoxUp" to="." method="_on_BoxUp_body_entered"]
+[connection signal="body_entered" from="BoxDown" to="." method="_on_BoxDown_body_entered"]
+[connection signal="body_entered" from="BoxLeft" to="." method="_on_BoxLeft_body_entered"]
+[connection signal="body_entered" from="BoxRight" to="." method="_on_BoxRight_body_entered"]
